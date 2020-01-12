@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStepBackward, faStepForward, faPlay } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStepBackward, faStepForward, faPlay)

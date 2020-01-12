@@ -8,9 +8,9 @@ const Header = ({ name,surname }) => (
     <Link
           to="/"         
         >
-         <h1 className="owner">
-        <span className="owner__name">{name}</span>
-        <span className="owner__surname">{surname}</span>
+         <h1 className="artist">
+        <span className="artist__name">{name}</span>
+        <span className="artist__surname">{surname}</span>
       </h1>
         </Link>
       

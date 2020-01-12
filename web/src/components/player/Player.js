@@ -1,12 +1,16 @@
 import React from 'react'
+import {PlayerButton} from '../playerButton'
 import './player.scss'
 
 
-export default ({playing}) => {
+
+export default () => {
 
     return(
         <div className="player">
-<h1>{playing}</h1>
+            <PlayerButton icon="step-backward" />
+            <PlayerButton icon="play"/>
+            <PlayerButton icon="step-forward"/>
         </div>
     )
     

@@ -1,12 +1,12 @@
+
 .player{
     display: flex;
-    justify-content: space-around;
-    background-color: var(--neutral);
     position: fixed;
-    bottom: 0;
-    left:0;
-    right: 0;
-    padding: 3em;
-    background-image: linear-gradient(to bottom, white, var(--neutral));
+    bottom: calc(var(--s3) * 1em);
+    left:50%;
+    transform: translateX(-50%);
     z-index: 0;
+    & > :not(:last-child){
+        margin-right: calc(var(--s-2) * 1em);
+    }
 }

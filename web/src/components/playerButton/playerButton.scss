@@ -1,0 +1,25 @@
+.player__button {
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
+    background-color:var(--neutral);
+    border-radius: 4%;
+    display: flex;
+    width: 3em;
+    height: 3em;
+    font-size: 1rem;
+}
+.player__button:hover,
+.player__button:focus {
+    background: #0053ba;
+}
+
+.player__button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.player__button:active {
+    transform: scale(0.99);
+}

@@ -2,3 +2,5 @@
 base= "web/"
 publish= "public"
 command= "gatsby build"
+[context."features/head-grid-styles"]
+  command = "gulp"

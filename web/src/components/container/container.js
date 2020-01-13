@@ -3,7 +3,7 @@ import "./container.scss"
 
 const Container = forwardRef((props, ref) => {
   return (
-    <div className="container" containerRef={ref}>
+    <div className="container" ref={ref}>
       {props.children}
     </div>
   )

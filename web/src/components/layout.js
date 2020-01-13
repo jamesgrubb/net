@@ -28,16 +28,19 @@ const Layout = ({ children }) => {
 
   const ref = useRef()
 
+  useEffect(() => {}, [])
+
   useEffect(() => {
     // gsap.set(ref.current, { autoAlpha: 1 })
     // gsap.from(ref.current.childNodes.NodeList[0],{y: -40, duration: 2, stagger: 0.6})
-    // gsap.set(containerRef.current, { autoAlpha: 1 })
+    gsap.set(containerRef.current, { autoAlpha: 0 })
+    gsap.to(containerRef.current, { autoAlpha: 1, duration: 0.3 })
     gsap.from(ref.current.children, { y: -40, duration: 2, stagger: 0.6 })
-  })
+  }, [])
 
   return (
     <>
-      <Container>
+      <Container ref={containerRef}>
         <Header
           style={{ visibility: "hidden" }}
           ref={ref}

@@ -28,7 +28,7 @@
   width: 100px;
   transform-origin: center center;
   transform: rotate(180deg);
-  margin: 4px;
+  margin: calc(var(--s3) * 1px);
 }
 @media (max-width: 500px) {
 }

@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
     gsap.to(containerRef.current, { autoAlpha: 1, duration: 0.6 })
     // gsap.set(ref.current.children, { autoAlpha: 0 })
     gsap.from(ref.current.children, {
-      autoAlpha: 1,
       y: -40,
       duration: 2,
       stagger: 0.6,

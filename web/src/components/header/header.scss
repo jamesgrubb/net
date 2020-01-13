@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   bottom: calc(var(--s3) * 1em);
-  left: 0;
+  left: calc(var(--s3) * 1em);
 }
 .nav {
   display: block;

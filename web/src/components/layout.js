@@ -33,14 +33,21 @@ const Layout = ({ children }) => {
   useEffect(() => {
     // gsap.set(ref.current, { autoAlpha: 1 })
     // gsap.from(ref.current.childNodes.NodeList[0],{y: -40, duration: 2, stagger: 0.6})
-    gsap.set(containerRef.current, { autoAlpha: 0 })
-    gsap.to(containerRef.current, { autoAlpha: 1, duration: 0.6 })
-    // gsap.set(ref.current.children, { autoAlpha: 0 })
-    gsap.from(ref.current.children, {
-      y: -40,
-      duration: 2,
-      stagger: 0.6,
-    })
+
+    gsap
+      .timeline()
+      .from(containerRef.current, { opacity: 0, duration: 4 })
+      .from(
+        ref.current.children,
+        {
+          opacity: 0,
+          y: -40,
+          duration: 2,
+          stagger: 0.6,
+          ease: "expo",
+        },
+        "-=3"
+      )
   }, [])
 
   return (

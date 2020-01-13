@@ -1,9 +1,9 @@
 import React from "react"
 import "./header-image.scss"
 import PropTypes from "prop-types"
-const HeaderImage = ({ src, alt }) => (
-  <img className="artist__portrait" src={src} alt={alt} />
-)
+const HeaderImage = React.forwardRef((props, ref) => (
+  <img ref={ref} className="artist__portrait" src={props.src} alt={props.alt} />
+))
 
 export default HeaderImage
 

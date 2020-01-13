@@ -1,8 +1,12 @@
-import React from "react"
+import React, { forwardRef } from "react"
 import "./container.scss"
 
-export default ({ containerRef, children }) => (
-  <div className="container" ref={containerRef}>
-    {children}
-  </div>
-)
+const Container = forwardRef((props, ref) => {
+  return (
+    <div className="container" containerRef={ref}>
+      {props.children}
+    </div>
+  )
+})
+
+export default Container

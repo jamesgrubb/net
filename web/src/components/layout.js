@@ -5,12 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Header } from "./header"
 import { Player } from "./player"
 import { Container } from "./container"
+import gsap from "gsap"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -23,11 +24,23 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const containerRef = useRef()
+
+  const ref = useRef()
+
+  useEffect(() => {
+    // gsap.set(ref.current, { autoAlpha: 1 })
+    // gsap.from(ref.current.childNodes.NodeList[0],{y: -40, duration: 2, stagger: 0.6})
+    // gsap.set(containerRef.current, { autoAlpha: 1 })
+    gsap.from(ref.current.children, { y: -40, duration: 2, stagger: 0.6 })
+  })
 
   return (
     <>
       <Container>
         <Header
+          style={{ visibility: "hidden" }}
+          ref={ref}
           name="Rupert"
           surname="Gibson"
           siteTitle={data.site.siteMetadata.title}

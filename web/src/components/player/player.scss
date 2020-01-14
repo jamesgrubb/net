@@ -1,9 +1,6 @@
 .player {
   display: flex;
-  position: fixed;
-  bottom: calc(var(--s3) * 1em + calc(var(--s3) * 1px));
-  left: calc(50% + var(--s1) * 1em);
-  transform: calctranslateX(-50%);
+  justify-self: center;
   z-index: 0;
   & > :not(:last-child) {
     margin-right: calc(var(--s-2) * 1em);

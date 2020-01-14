@@ -1,11 +1,12 @@
+import React from "react"
+import "./playerButton.scss"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import React from 'react'
-import './playerButton.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-export default ({icon}) => (
+export default ({ icon, text }) => (
   <div>
-    <button className="player__button">{icon && <FontAwesomeIcon icon={icon}/>}</button>
+    <button className="player__button">
+      {icon && <FontAwesomeIcon icon={icon} />}
+      {text}
+    </button>
   </div>
-
 )

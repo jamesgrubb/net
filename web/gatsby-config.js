@@ -1,4 +1,5 @@
-const autoprefixer = require('autoprefixer')
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -8,6 +9,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: process.env.GATSBY_SANITY_CLIENT_ID,
+        dataset: "production",
+        token: process.env.GATSBY_SANITY_TOKEN,
+        watch: true,
+        overlayDrafts: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,7 +39,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
